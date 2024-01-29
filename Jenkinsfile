@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: "${env.gitlabBranch}",
+                git branch: "main",
                     credentialsId: 'none',
                     url: 'https://github.com/varunthamishetti/terraform.git'
             }
