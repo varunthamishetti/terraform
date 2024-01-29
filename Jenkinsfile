@@ -12,8 +12,8 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: "${env.gitlabBranch}",
-                    credentialsId: 'Terraform-modules',
-                    url: 'https://osigitlab.osius.com/devops/terraform.git'
+                    credentialsId: 'none',
+                    url: 'https://github.com/varunthamishetti/terraform.git'
             }
         }
 
