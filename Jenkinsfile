@@ -29,7 +29,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 script {
-                    sh "terraform plan -input=false -out tfplan -var 'branch_name=${env.gitlabBranch}'"
+                    sh "terraform plan -input=false -out tfplan -var 'branch_name=main'"
                     // Add other variables or workspace selection as needed
                     sh 'terraform show -no-color tfplan > tfplan.txt'
                     // Optionally handle plan errors and warnings
